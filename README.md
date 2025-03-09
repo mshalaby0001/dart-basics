@@ -467,3 +467,150 @@ void main() {
 
 ---
 
+## Operators 
+
+Here’s a summary of the [Dart Operators](https://dart.dev/language/operators) page, using the same method with explanations and **code examples**:
+
+---
+
+### **Dart Operators**
+Dart provides a variety of operators for performing operations on variables and values. These include arithmetic, equality, relational, logical, and more.
+
+---
+
+### **1. Arithmetic Operators**
+Used for basic mathematical operations.
+
+| Operator | Description          | Example                     |
+|----------|----------------------|-----------------------------|
+| `+`      | Addition             | `print(2 + 3); // 5`        |
+| `-`      | Subtraction          | `print(5 - 2); // 3`        |
+| `*`      | Multiplication       | `print(2 * 3); // 6`        |
+| `/`      | Division             | `print(6 / 3); // 2.0`      |
+| `%`      | Modulus (Remainder)  | `print(7 % 3); // 1`        |
+| `~/`     | Integer Division     | `print(7 ~/ 3); // 2`       |
+| `-expr`  | Negation             | `print(-(5)); // -5`        |
+
+---
+
+### **2. Equality and Relational Operators**
+Used to compare values.
+
+| Operator | Description                  | Example                         |
+|----------|------------------------------|---------------------------------|
+| `==`     | Equal to                     | `print(2 == 3); // false`       |
+| `!=`     | Not equal to                 | `print(2 != 3); // true`        |
+| `>`      | Greater than                 | `print(5 > 3); // true`         |
+| `<`      | Less than                    | `print(5 < 3); // false`        |
+| `>=`     | Greater than or equal to     | `print(5 >= 5); // true`        |
+| `<=`     | Less than or equal to        | `print(5 <= 3); // false`       |
+
+---
+
+### **3. Logical Operators**
+Used to combine boolean expressions.
+
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `&&`     | Logical AND                  | `print(true && false); // false`          |
+| `||`     | Logical OR                   | `print(true || false); // true`           |
+| `!`      | Logical NOT                  | `print(!true); // false`                  |
+
+---
+
+### **4. Type Test Operators**
+Used to check the type of an object.
+
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `is`     | True if the object has the specified type | `print(5 is int); // true`          |
+| `is!`    | True if the object does not have the specified type | `print(5 is! String); // true` |
+
+---
+
+### **5. Assignment Operators**
+Used to assign values to variables.
+
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `=`      | Simple assignment            | `var x = 5;`                              |
+| `+=`     | Add and assign               | `x += 3; // x = x + 3`                    |
+| `-=`     | Subtract and assign          | `x -= 2; // x = x - 2`                    |
+| `*=`     | Multiply and assign          | `x *= 2; // x = x * 2`                    |
+| `/=`     | Divide and assign            | `x /= 2; // x = x / 2`                    |
+| `%=`     | Modulus and assign           | `x %= 2; // x = x % 2`                    |
+| `~/=`    | Integer division and assign  | `x ~/= 2; // x = x ~/ 2`                  |
+
+---
+
+### **6. Conditional Expressions**
+Used for conditional evaluation.
+
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `expr1 ? expr2 : expr3` | Ternary operator | `print(5 > 3 ? 'Yes' : 'No'); // Yes` |
+| `expr1 ?? expr2`        | Null-coalescing operator | `var x = null; print(x ?? 10); // 10` |
+
+---
+
+### **7. Cascade Notation (`..`)**
+Allows you to perform multiple operations on the same object.
+
+#### Example:
+```dart
+class Person {
+  String? name;
+  int? age;
+
+  void printInfo() {
+    print('Name: $name, Age: $age');
+  }
+}
+
+void main() {
+  var person = Person()
+    ..name = 'Alice'
+    ..age = 25
+    ..printInfo(); // Output: Name: Alice, Age: 25
+}
+```
+
+---
+
+### **8. Bitwise and Shift Operators**
+Used for low-level bit manipulation.
+
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `&`      | Bitwise AND                  | `print(5 & 3); // 1`                     |
+| `|`      | Bitwise OR                   | `print(5 | 3); // 7`                     |
+| `^`      | Bitwise XOR                  | `print(5 ^ 3); // 6`                      |
+| `~`      | Bitwise NOT                  | `print(~5); // -6`                        |
+| `<<`     | Left shift                   | `print(5 << 1); // 10`                    |
+| `>>`     | Right shift                  | `print(5 >> 1); // 2`                     |
+
+---
+
+### **9. Other Operators**
+| Operator | Description                  | Example                                   |
+|----------|------------------------------|-------------------------------------------|
+| `?.`     | Conditional access           | `var obj; print(obj?.name); // null`      |
+| `[]`     | Access list/map element      | `var list = [1, 2]; print(list[0]); // 1` |
+| `()`     | Function call                | `void greet() { print('Hello'); } greet();` |
+
+---
+
+### **Summary of Dart Operators**
+| Category                  | Example                                   |
+|---------------------------|-------------------------------------------|
+| Arithmetic                | `print(2 + 3); // 5`                     |
+| Equality/Relational       | `print(2 == 3); // false`                 |
+| Logical                   | `print(true && false); // false`          |
+| Type Test                 | `print(5 is int); // true`                |
+| Assignment                | `x += 3; // x = x + 3`                    |
+| Conditional Expressions   | `print(5 > 3 ? 'Yes' : 'No'); // Yes`     |
+| Cascade Notation          | `person..name = 'Alice'..age = 25;`       |
+| Bitwise/Shift             | `print(5 & 3); // 1`                      |
+| Other                     | `print(obj?.name); // null`               |
+
+---
