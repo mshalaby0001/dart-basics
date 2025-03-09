@@ -1,7 +1,33 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+import 'dart:developer' as developer;
+
 
 void main() {
   runApp(const MyApp());
+  // annonymous function example
+  var list = [1,2,3];
+  list.forEach((element) => developer.log(element.toString(),name: "annonymous function"));
+
+  // function as first class object
+  void printMessage(String message) {
+    developer.log(message,name: "function as first class object");
+  }
+  var showMessage = printMessage; // Assigning a function to a variable
+  showMessage("Hello"); // Output: Hello, Dart!
+
+  // Generators
+  Iterable<int> generateNumbers() sync* {
+    for (var i = 0; i < 5; i++) {
+      yield i;
+    }
+  }
+  var numbers = generateNumbers();
+  developer.log(numbers.toList().toString(),name: 'generators example');
+
+
 }
 
 class MyApp extends StatelessWidget {
