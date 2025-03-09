@@ -4,6 +4,8 @@ Here’s a rewritten version of your answer, incorporating **code examples** for
 
 ---
 
+## Variables 
+
 ### **Variable Declaration**
 Dart supports variables declared with `var`, `dynamic`, `final`, and `const`.
 
@@ -110,4 +112,176 @@ print(constant);   // Output: 3.14
 
 ---
 
-This version combines explanations with **code examples** to make the concepts clearer. Let me know if you need further clarification!
+## Built-in types
+
+Here’s a summary of the [Dart Built-in Types](https://dart.dev/language/built-in-types) page, using the same method with explanations and **code examples**:
+
+---
+
+### **Dart Built-in Types**
+Dart provides several built-in types, including numbers, strings, booleans, lists, sets, maps, and more.
+
+---
+
+### **1. Numbers**
+Dart supports two types of numbers: `int` (integers) and `double` (floating-point numbers).
+
+#### Example:
+```dart
+int age = 25;          // Integer
+double height = 5.9;   // Double
+print(age);            // Output: 25
+print(height);         // Output: 5.9
+```
+
+---
+
+### **2. Strings**
+Strings are sequences of characters and can be enclosed in single or double quotes.
+
+#### Example:
+```dart
+String name = 'Alice';
+String greeting = "Hello, $name!"; // String interpolation
+print(greeting); // Output: Hello, Alice!
+```
+
+---
+
+### **3. Booleans**
+Booleans represent true or false values.
+
+#### Example:
+```dart
+bool isRaining = true;
+bool isSunny = false;
+print(isRaining); // Output: true
+```
+
+---
+
+### **4. Lists**
+Lists are ordered collections of objects. They can be fixed-length or growable.
+
+#### Example:
+```dart
+List<int> numbers = [1, 2, 3]; // Growable list
+numbers.add(4);                // Add an element
+print(numbers);                // Output: [1, 2, 3, 4]
+```
+
+---
+
+### **5. Sets**
+Sets are unordered collections of unique items.
+
+#### Example:
+```dart
+Set<String> fruits = {'apple', 'banana', 'orange'};
+fruits.add('apple'); // Duplicate item, won't be added
+print(fruits);       // Output: {apple, banana, orange}
+```
+
+---
+
+### **6. Maps**
+Maps are collections of key-value pairs.
+
+#### Example:
+```dart
+Map<String, int> ages = {
+  'Alice': 25,
+  'Bob': 30,
+};
+print(ages['Alice']); // Output: 25
+```
+
+---
+
+### **7. Runes**
+Runes represent Unicode code points of a string.
+
+#### Example:
+```dart
+var heart = '\u2665'; // Unicode for a heart symbol
+print(heart);         // Output: ♥
+```
+
+---
+
+### **8. Symbols**
+Symbols are used to represent identifiers or metadata.
+
+#### Example:
+```dart
+var symbol = #mySymbol; // Symbol literal
+print(symbol);          // Output: Symbol("mySymbol")
+```
+
+---
+
+### **9. Null**
+Dart has a special type `Null` to represent the absence of a value.
+
+#### Example:
+```dart
+int? nullableValue; // Nullable integer
+print(nullableValue); // Output: null
+```
+
+---
+
+### **10. Type Inference**
+Dart can infer types automatically when you use `var`.
+
+#### Example:
+```dart
+var message = 'Hello'; // Inferred as String
+var count = 42;        // Inferred as int
+print(message);        // Output: Hello
+print(count);          // Output: 42
+```
+
+---
+
+### **11. Type Checking**
+You can check the type of a variable at runtime using `is` and `is!`.
+
+#### Example:
+```dart
+var value = 42;
+print(value is int);  // Output: true
+print(value is! String); // Output: true
+```
+
+---
+
+### **12. Type Casting**
+You can cast objects to a specific type using the `as` keyword.
+
+#### Example:
+```dart
+num number = 42;
+int integer = number as int; // Casting to int
+print(integer);              // Output: 42
+```
+
+---
+
+### **Summary of Built-in Types**
+| Type      | Example                          |
+|-----------|----------------------------------|
+| `int`     | `int age = 25;`                  |
+| `double`  | `double height = 5.9;`           |
+| `String`  | `String name = 'Alice';`         |
+| `bool`    | `bool isRaining = true;`         |
+| `List`    | `List<int> numbers = [1, 2, 3];` |
+| `Set`     | `Set<String> fruits = {'apple'};`|
+| `Map`     | `Map<String, int> ages = {'Alice': 25};` |
+| `Runes`   | `var heart = '\u2665';`          |
+| `Symbol`  | `var symbol = #mySymbol;`        |
+| `Null`    | `int? nullableValue;`            |
+
+---
+
+ 
