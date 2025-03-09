@@ -614,3 +614,394 @@ Used for low-level bit manipulation.
 | Other                     | `print(obj?.name); // null`               |
 
 ---
+## Control Flow Statments 
+
+Here’s a summary of the [Dart Branches](https://dart.dev/language/branches) page, using the same method with explanations and **code examples**:
+
+---
+
+### **Dart Branches**
+Dart provides control flow statements like `if`, `else`, `switch`, and `case` to handle decision-making in your code.
+
+---
+
+### **1. `if` and `else` Statements**
+Used to execute code based on a condition.
+
+#### Example:
+```dart
+int age = 18;
+if (age >= 18) {
+  print('You are an adult.');
+} else {
+  print('You are a minor.');
+}
+// Output: You are an adult.
+```
+
+---
+
+### **2. `else if` Ladder**
+Used to check multiple conditions.
+
+#### Example:
+```dart
+int score = 85;
+if (score >= 90) {
+  print('Grade: A');
+} else if (score >= 80) {
+  print('Grade: B');
+} else if (score >= 70) {
+  print('Grade: C');
+} else {
+  print('Grade: F');
+}
+// Output: Grade: B
+```
+
+---
+
+### **3. `switch` and `case` Statements**
+Used to compare a value against multiple cases.
+
+#### Example:
+```dart
+String day = 'Monday';
+switch (day) {
+  case 'Monday':
+    print('Start of the workweek.');
+    break;
+  case 'Friday':
+    print('End of the workweek.');
+    break;
+  default:
+    print('Midweek day.');
+}
+// Output: Start of the workweek.
+```
+
+---
+
+### **4. `break` and `continue`**
+- `break`: Exits the loop or switch statement.
+- `continue`: Skips the current iteration and moves to the next.
+
+#### Example:
+```dart
+for (var i = 0; i < 5; i++) {
+  if (i == 2) {
+    continue; // Skip iteration when i is 2
+  }
+  if (i == 4) {
+    break; // Exit loop when i is 4
+  }
+  print(i);
+}
+// Output: 0, 1, 3
+```
+
+---
+
+### **5. `assert` Statement**
+Used to check for conditions during development. If the condition is false, it throws an error.
+
+#### Example:
+```dart
+int age = 15;
+assert(age >= 18, 'Age must be 18 or older.'); // Throws an error in debug mode
+```
+
+---
+
+### **6. Ternary Operator (`? :`)**
+A shorthand for `if-else` statements.
+
+#### Example:
+```dart
+int age = 20;
+String status = age >= 18 ? 'Adult' : 'Minor';
+print(status); // Output: Adult
+```
+
+---
+
+### **7. `for` Loop**
+Used to iterate over a sequence of values.
+
+#### Example:
+```dart
+for (var i = 0; i < 3; i++) {
+  print(i);
+}
+// Output: 0, 1, 2
+```
+
+---
+
+### **8. `while` Loop**
+Repeats a block of code while a condition is true.
+
+#### Example:
+```dart
+int i = 0;
+while (i < 3) {
+  print(i);
+  i++;
+}
+// Output: 0, 1, 2
+```
+
+---
+
+### **9. `do-while` Loop**
+Similar to `while`, but the condition is checked after the loop body.
+
+#### Example:
+```dart
+int i = 0;
+do {
+  print(i);
+  i++;
+} while (i < 3);
+// Output: 0, 1, 2
+```
+
+---
+
+### **10. `for-in` Loop**
+Used to iterate over elements in a collection.
+
+#### Example:
+```dart
+var numbers = [1, 2, 3];
+for (var number in numbers) {
+  print(number);
+}
+// Output: 1, 2, 3
+```
+
+---
+
+### **11. `break` and `continue` in Loops**
+- `break`: Exits the loop.
+- `continue`: Skips the current iteration.
+
+#### Example:
+```dart
+for (var i = 0; i < 5; i++) {
+  if (i == 2) continue; // Skip iteration when i is 2
+  if (i == 4) break;    // Exit loop when i is 4
+  print(i);
+}
+// Output: 0, 1, 3
+```
+
+---
+
+### **Summary of Dart Branches**
+| Feature               | Example                                   |
+|-----------------------|-------------------------------------------|
+| `if-else`             | `if (age >= 18) { print('Adult'); }`      |
+| `else if`             | `else if (score >= 80) { print('B'); }`   |
+| `switch-case`         | `switch (day) { case 'Monday': ... }`     |
+| `break`               | `break;`                                  |
+| `continue`            | `continue;`                               |
+| `assert`              | `assert(age >= 18, 'Age must be 18+');`   |
+| Ternary Operator      | `status = age >= 18 ? 'Adult' : 'Minor';` |
+| `for` Loop            | `for (var i = 0; i < 3; i++) { ... }`     |
+| `while` Loop          | `while (i < 3) { ... }`                   |
+| `do-while` Loop       | `do { ... } while (i < 3);`               |
+| `for-in` Loop         | `for (var number in numbers) { ... }`     |
+
+---
+
+Here’s a summary of the [Dart Loops](https://dart.dev/language/loops) page, using the same method with explanations and **code examples**:
+
+---
+
+### **Dart Loops**
+Loops are used to repeatedly execute a block of code. Dart supports several types of loops, including `for`, `while`, `do-while`, and `for-in`.
+
+---
+
+### **1. `for` Loop**
+The `for` loop is used to iterate a block of code a specific number of times.
+
+#### Example:
+```dart
+for (var i = 0; i < 3; i++) {
+  print(i);
+}
+// Output: 0, 1, 2
+```
+
+---
+
+### **2. `while` Loop**
+The `while` loop repeats a block of code as long as a condition is true.
+
+#### Example:
+```dart
+var i = 0;
+while (i < 3) {
+  print(i);
+  i++;
+}
+// Output: 0, 1, 2
+```
+
+---
+
+### **3. `do-while` Loop**
+The `do-while` loop is similar to the `while` loop, but the condition is evaluated after the loop body, ensuring the loop runs at least once.
+
+#### Example:
+```dart
+var i = 0;
+do {
+  print(i);
+  i++;
+} while (i < 3);
+// Output: 0, 1, 2
+```
+
+---
+
+### **4. `for-in` Loop**
+The `for-in` loop is used to iterate over elements in a collection (e.g., lists, sets).
+
+#### Example:
+```dart
+var numbers = [1, 2, 3];
+for (var number in numbers) {
+  print(number);
+}
+// Output: 1, 2, 3
+```
+
+---
+
+### **5. `break` Statement**
+The `break` statement is used to exit a loop prematurely.
+
+#### Example:
+```dart
+for (var i = 0; i < 5; i++) {
+  if (i == 3) {
+    break; // Exit the loop when i is 3
+  }
+  print(i);
+}
+// Output: 0, 1, 2
+```
+
+---
+
+### **6. `continue` Statement**
+The `continue` statement skips the current iteration and moves to the next iteration of the loop.
+
+#### Example:
+```dart
+for (var i = 0; i < 5; i++) {
+  if (i == 2) {
+    continue; // Skip iteration when i is 2
+  }
+  print(i);
+}
+// Output: 0, 1, 3, 4
+```
+
+---
+
+### **7. Nested Loops**
+Loops can be nested inside other loops.
+
+#### Example:
+```dart
+for (var i = 1; i <= 2; i++) {
+  for (var j = 1; j <= 2; j++) {
+    print('i: $i, j: $j');
+  }
+}
+// Output:
+// i: 1, j: 1
+// i: 1, j: 2
+// i: 2, j: 1
+// i: 2, j: 2
+```
+
+---
+
+### **8. Iterating Over Maps**
+You can use `for-in` loops to iterate over keys, values, or entries in a map.
+
+#### Example:
+```dart
+var ages = {'Alice': 25, 'Bob': 30};
+for (var name in ages.keys) {
+  print('Name: $name');
+}
+// Output:
+// Name: Alice
+// Name: Bob
+
+for (var age in ages.values) {
+  print('Age: $age');
+}
+// Output:
+// Age: 25
+// Age: 30
+
+for (var entry in ages.entries) {
+  print('${entry.key}: ${entry.value}');
+}
+// Output:
+// Alice: 25
+// Bob: 30
+```
+
+---
+
+### **9. `forEach` Method**
+The `forEach` method is a concise way to iterate over collections.
+
+#### Example:
+```dart
+var numbers = [1, 2, 3];
+numbers.forEach((number) {
+  print(number);
+});
+// Output: 1, 2, 3
+```
+
+---
+
+### **10. `for` Loop with Iterables**
+You can use `for` loops with iterables like lists, sets, and maps.
+
+#### Example:
+```dart
+var fruits = {'apple', 'banana', 'orange'};
+for (var fruit in fruits) {
+  print(fruit);
+}
+// Output: apple, banana, orange
+```
+
+---
+
+### **Summary of Dart Loops**
+| Loop Type       | Example                                   |
+|-----------------|-------------------------------------------|
+| `for`           | `for (var i = 0; i < 3; i++) { ... }`     |
+| `while`         | `while (i < 3) { ... }`                   |
+| `do-while`      | `do { ... } while (i < 3);`               |
+| `for-in`        | `for (var number in numbers) { ... }`     |
+| `break`         | `if (i == 3) break;`                      |
+| `continue`      | `if (i == 2) continue;`                   |
+| Nested Loops    | `for (var i = 1; i <= 2; i++) { ... }`    |
+| Iterating Maps  | `for (var entry in ages.entries) { ... }` |
+| `forEach`       | `numbers.forEach((number) { ... });`      |
+
+---
+
