@@ -284,4 +284,186 @@ print(integer);              // Output: 42
 
 ---
 
- 
+ ## Functions 
+
+Here’s a summary of the [Dart Functions](https://dart.dev/language/functions) page, using the same method with explanations and **code examples**:
+
+---
+
+### **Dart Functions**
+Functions are reusable blocks of code that perform a specific task. Dart supports various types of functions, including named parameters, optional parameters, and arrow syntax.
+
+---
+
+### **1. Basic Function**
+A simple function that takes parameters and returns a value.
+
+#### Example:
+```dart
+int add(int a, int b) {
+  return a + b;
+}
+print(add(2, 3)); // Output: 5
+```
+
+---
+
+### **2. Arrow Syntax**
+For single-expression functions, you can use the arrow (`=>`) syntax.
+
+#### Example:
+```dart
+int multiply(int a, int b) => a * b;
+print(multiply(2, 3)); // Output: 6
+```
+
+---
+
+### **3. Optional Parameters**
+Dart supports optional positional and named parameters.
+
+#### **a. Optional Positional Parameters**
+Use square brackets `[]` to define optional positional parameters.
+
+#### Example:
+```dart
+String greet(String name, [String? title]) {
+  return title == null ? 'Hello, $name!' : 'Hello, $title $name!';
+}
+print(greet('Alice'));           // Output: Hello, Alice!
+print(greet('Bob', 'Mr.'));      // Output: Hello, Mr. Bob!
+```
+
+#### **b. Optional Named Parameters**
+Use curly braces `{}` to define optional named parameters.
+
+#### Example:
+```dart
+String greet({String? name, String? title}) {
+  return title == null ? 'Hello, $name!' : 'Hello, $title $name!';
+}
+print(greet(name: 'Alice'));           // Output: Hello, Alice!
+print(greet(title: 'Mr.', name: 'Bob')); // Output: Hello, Mr. Bob!
+```
+
+---
+
+### **4. Default Parameter Values**
+You can provide default values for optional parameters.
+
+#### Example:
+```dart
+String greet({String name = 'Guest', String title = 'Mr.'}) {
+  return 'Hello, $title $name!';
+}
+print(greet()); // Output: Hello, Mr. Guest!
+```
+
+---
+
+### **5. Anonymous Functions**
+Anonymous functions (or lambdas) are functions without a name.
+
+#### Example:
+```dart
+var list = [1, 2, 3];
+list.forEach((item) {
+  print(item); // Output: 1, 2, 3
+});
+```
+
+---
+
+### **6. Lexical Scope**
+Dart is lexically scoped, meaning the scope of variables is determined by the layout of the code.
+
+#### Example:
+```dart
+var x = 10;
+void printX() {
+  print(x); // Accessing the outer variable
+}
+printX(); // Output: 10
+```
+
+---
+
+### **7. Lexical Closures**
+Functions can capture and retain variables from their surrounding scope.
+
+#### Example:
+```dart
+Function makeAdder(int addBy) {
+  return (int i) => addBy + i;
+}
+var addTwo = makeAdder(2);
+print(addTwo(3)); // Output: 5
+```
+
+---
+
+### **8. `main()` Function**
+The `main()` function is the entry point of a Dart program.
+
+#### Example:
+```dart
+void main() {
+  print('Hello, Dart!'); // Output: Hello, Dart!
+}
+```
+
+---
+
+### **9. Functions as First-Class Objects**
+Functions can be assigned to variables, passed as arguments, and returned from other functions.
+
+#### Example:
+```dart
+void printMessage(String message) {
+  print(message);
+}
+
+void main() {
+  var showMessage = printMessage; // Assigning a function to a variable
+  showMessage('Hello, Dart!');    // Output: Hello, Dart!
+}
+```
+
+---
+
+### **10. Generators**
+Generators produce a sequence of values lazily using `sync*` and `async*`.
+
+#### Example:
+```dart
+Iterable<int> generateNumbers(int n) sync* {
+  for (var i = 1; i <= n; i++) {
+    yield i;
+  }
+}
+
+void main() {
+  var numbers = generateNumbers(3);
+  print(numbers.toList()); // Output: [1, 2, 3]
+}
+```
+
+---
+
+### **Summary of Dart Functions**
+| Feature                     | Example                                                                 |
+|-----------------------------|-------------------------------------------------------------------------|
+| Basic Function              | `int add(int a, int b) { return a + b; }`                               |
+| Arrow Syntax                | `int multiply(int a, int b) => a * b;`                                  |
+| Optional Positional Params  | `String greet(String name, [String? title]) { ... }`                    |
+| Optional Named Params       | `String greet({String? name, String? title}) { ... }`                   |
+| Default Parameter Values    | `String greet({String name = 'Guest', String title = 'Mr.'}) { ... }`   |
+| Anonymous Functions         | `list.forEach((item) { print(item); });`                                |
+| Lexical Scope               | `var x = 10; void printX() { print(x); }`                               |
+| Lexical Closures            | `Function makeAdder(int addBy) { return (int i) => addBy + i; }`        |
+| `main()` Function           | `void main() { print('Hello, Dart!'); }`                                |
+| Functions as First-Class    | `var showMessage = printMessage; showMessage('Hello, Dart!');`          |
+| Generators                  | `Iterable<int> generateNumbers(int n) sync* { for (var i = 1; i <= n; i++) yield i; }` |
+
+---
+
